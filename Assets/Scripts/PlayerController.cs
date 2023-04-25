@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
         Vector3 move = moveDir.normalized * speed * Time.deltaTime;
         transform.Translate(move);
         Vector2 texOffset = background.material.mainTextureOffset;
-        texOffset += new Vector2(move.x, move.z) / 10;
+        texOffset += new Vector2(move.x, move.z) / 20;
         background.material.mainTextureOffset = texOffset;
         
         if (Input.GetKeyDown(KeyCode.Space))

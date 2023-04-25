@@ -20,7 +20,7 @@ public class SpawnManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z))
         {
             //randomly generate enemy index and spawn position
-            Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
+            Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX , spawnRangeX) + transform.position.x, 0, spawnPosZ + transform.position.z);
             int enemyIndex = Random.Range(0, enemyPrefabs.Length);
             Instantiate(enemyPrefabs[enemyIndex], spawnPos,
                 enemyPrefabs[enemyIndex].transform.rotation);
