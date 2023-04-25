@@ -5,6 +5,8 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject[] enemyPrefabs;
+    private float spawnRangeX = 5;
+    private float spawnPosZ = 5;
     
     // Start is called before the first frame update
     void Start()
@@ -17,8 +19,10 @@ public class SpawnManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Z))
         {
+            //randomly generate enemy index and spawn position
+            Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
             int enemyIndex = Random.Range(0, enemyPrefabs.Length);
-            Instantiate(enemyPrefabs[enemyIndex], new Vector3(0, 1, -5),
+            Instantiate(enemyPrefabs[enemyIndex], spawnPos,
                 enemyPrefabs[enemyIndex].transform.rotation);
         }
     }
