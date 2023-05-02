@@ -365,6 +365,7 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 6014863032788823669, guid: 27c31ebfd73183549b071e429fa41235, type: 3}
   - {fileID: 6014863032788823669, guid: 40e2df002067dff48b17784ccb7ee503, type: 3}
+  - {fileID: 6014863032788823669, guid: e0ba8930046e82e48ad166169b6baed7, type: 3}
   interval: 3
 --- !u!4 &237800825
 Transform:
