@@ -8,7 +8,7 @@ public class DestroyOutofBounds : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        topBound += transform.position.z;
     }
 
     // Update is called once per frame
